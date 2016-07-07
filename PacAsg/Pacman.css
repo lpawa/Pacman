@@ -1,0 +1,186 @@
+body{
+  background-color: black;
+}
+h1{
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+h1::after{
+  content: " ";
+  position: absolute;
+  height: 10px;
+  width: 200%;
+  margin-top: 50px;
+  margin-left: -100%;
+  background-color: red;
+}
+.Game{
+  margin-top: 200px;
+  height: 140px;
+  width: auto;
+  border: 2px solid white;
+  padding-top:  5px;
+  position: relative;
+
+}
+.pacmanBody{
+margin-top: 10px;
+position: absolute;
+animation: move 10s linear infinite;
+}
+.upperHalf{
+  width: 0px;
+  height:0px;
+  border:50px solid yellow;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  border-radius: 50px;
+  position: absolute;
+  animation: myanimu 2s linear infinite;
+  z-index: 9;
+}
+.lowerHalf{
+  width: 0px;
+  height:0px;
+  border:50px solid yellow;
+  border-right-color:transparent;
+  border-top-color:transparent;
+  border-radius: 50px;
+  position: absolute;
+  animation: myaniml 2s linear infinite;
+  z-index: 8;
+}
+.eye{
+  width: 0px;
+  height: 0px;
+  border: 8px solid black;
+  z-index: 30;
+  position: absolute;
+  border-radius: 8px;
+  margin-top: 12px;
+  margin-left: 54px;
+}
+.teeth1{
+  width: 0px;
+  height: 0px;
+  border: 10px solid transparent;
+  position: absolute;
+  z-index: -3;
+  border-top-color: white;
+  margin-left: 20px;
+  margin-top: -30px;
+  transform: rotateZ(-40deg);
+}
+.teeth2{
+  width: 0px;
+  height: 0px;
+  border: 7px solid transparent;
+  position: absolute;
+  z-index: -2;
+  border-bottom-color: white;
+  margin-left: 15px;
+  margin-top: 8px;
+  transform: rotateZ(40deg);
+}
+.teeth3{
+  width: 0px;
+  height: 0px;
+    border: 10px solid transparent;
+  position: absolute;
+  z-index: -10;
+  border-top-color: white;
+  margin-left: 10px;
+  margin-top: -20px;
+  transform: rotateZ(-40deg);
+}
+.teeth4{
+  width: 0px;
+  height: 0px;
+  border: 7px solid transparent;
+  position: absolute;
+  z-index:-15;
+  border-bottom-color: white;
+  margin-left: 25px;
+  margin-top: 16px;
+  transform: rotateZ(40deg);
+}
+.stomach{
+  margin-top: -15px;
+  height: 145px;
+  width: 5000px;
+  margin-left: -4950px;
+  background-color: black;
+  position: absolute;
+  z-index: 2;
+}
+.balls{
+  display: flex;
+  justify-content: space-around;;
+}
+.balls *{
+  width:0px;
+  height:0px;
+  border: 10px solid red;
+  border-radius: 10px;
+  margin-top: 48px;
+
+  position: absolute;
+  z-index: -4;
+}
+.ball1{
+  margin-left: 0px;
+}
+.ball2{
+  margin-left: 100px;
+}
+.ball3{
+  margin-left: 200px;
+}
+.ball4{
+  margin-left: 300px;
+}
+
+@-webkit-keyframes myanimu{
+  0%{
+    transform: rotateZ(40deg);
+  }
+  50%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(40deg);
+  }
+
+}
+@-webkit-keyframes myaniml{
+  0%{
+    transform: rotateZ(-40deg);
+  }
+  50%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(-40deg);
+  }
+
+}
+@-webkit-keyframes move{
+  0%{
+    margin-left: 0%;
+    transform: scaleX(1);
+  }
+  50%{
+    margin-left: 100%;
+    transform: scaleX(1);
+  }
+  50.1%{
+    transform: scaleX(-1);
+    margin-right: 0%;
+
+  }
+  100%{
+    transform: scaleX(-1);
+    margin-right:100%
+  }
+}
